@@ -161,6 +161,72 @@ const adviceResponses = {
     "Beta, after education, think about starting your own business.",
     "Beta, if you’re educated, act like it. No excuses!"
   ],
+// Emotional Responses
+  stressed: [
+    "Beta, stress is for people who actually work hard. What have you done to be stressed?",
+    "Beta, stress? Just drink chai and stop thinking so much.",
+    "Beta, stress doesn’t solve anything. Finish your work instead!"
+  ],
+  overwhelmed: [
+    "Beta, overwhelmed? Sharma ji’s son handles a job, family, and gym!",
+    "Beta, you’re 24. Overwhelmed by what? Wait till you’re paying bills!",
+    "Beta, this is life. Being overwhelmed is normal. Learn to manage it!"
+  ],
+  sad: [
+    "Beta, sadness is for weak people. Get up and do something productive!",
+    "Beta, sadness won’t pay your rent. Go study or work.",
+    "Beta, why are you sad? You have a roof, food, and Wi-Fi. What else do you need?"
+  ],
+  happy: [
+    "Beta, why are you so happy? Did you invent something? Win a Nobel Prize?",
+    "Beta, don’t celebrate too much. Nazar lag jayegi!",
+    "Beta, happiness is temporary. Focus on your goals instead of smiling."
+  ],
+  tired: [
+    "Beta, tiredness is for people who build houses, not for those who sit at desks!",
+    "Beta, tired? At your age, I used to walk 10 kilometers daily!",
+    "Beta, sleep is for the lazy. Get up and work harder!"
+  ],
+  anxious: [
+    "Beta, anxiety is just an excuse. Drink some chai and face the problem.",
+    "Beta, don’t overthink. Just do what needs to be done. Problem solved!",
+    "Beta, anxiety doesn’t exist in our generation. It’s for people with free time."
+  ],
+  lonely: [
+    "Beta, lonely? You have family. What else do you need?",
+    "Beta, loneliness is for people without purpose. Find a goal and work towards it.",
+    "Beta, just get married. Problem solved!"
+  ],
+  lost: [
+    "Beta, how can you be lost? Sharma ji’s son has a roadmap for his life already!",
+    "Beta, lost? Just find yourself. It’s not that hard.",
+    "Beta, you’re not lost. You’re just lazy and not thinking hard enough."
+  ],
+  unmotivated: [
+    "Beta, unmotivated? You should see how we worked at your age!",
+    "Beta, motivation is overrated. Just do what needs to be done!",
+    "Beta, you don’t need motivation. You need discipline. Get moving!"
+  ],
+  hungry: [
+    "Beta, if you’re hungry, eat food, not excuses.",
+    "Beta, hunger won’t kill you. Finish your work first.",
+    "Beta, make yourself useful and cook something. You’re not royalty!"
+  ],
+  thirsty: [
+    "Beta, you’re thirsty? Drink water and stop complaining.",
+    "Beta, chai is the only drink you need. Forget everything else.",
+    "Beta, if you’re thirsty, stop scrolling Instagram and go to the kitchen!"
+  ],
+  bored: [
+    "Beta, bored? Clean the house. You won’t feel bored anymore.",
+    "Beta, if you’re bored, Sharma ji’s son is available to teach you life lessons.",
+    "Beta, boredom is a sign of laziness. Find a goal!"
+  ],
+  sleepy: [
+    "Beta, you’re sleepy? Wake up! The world isn’t waiting for you.",
+    "Beta, tiredness is temporary, but failure is permanent. Get back to work!",
+    "Beta, no one sleeps their way to success. Keep going!"
+  ],
 
   default: [
     "Beta, life is short, but people’s gossip lasts forever. Think about that.",
@@ -171,49 +237,63 @@ const adviceResponses = {
 
 
   const keywordMap = {
+  hungry: ['hungry', 'hunger', 'starving', 'food', 'need food', 'eat', 'eating', 'ate', 'will eat'],
+  thirsty: ['thirsty', 'thirst', 'need water', 'drink', 'drinking', 'drank', 'will drink', 'water', 'juice', 'beverage'],
+  bored: ['bored', 'boredom', 'nothing to do', 'boring', 'feel bored', 'felt bored', 'will be bored'],
+  sleepy: ['sleepy', 'tired', 'need sleep', 'want to sleep', 'feeling sleepy', 'slept', 'will sleep', 'bedtime', 'nap'],
   // School and Education
-  school: ['school', 'syllabus', 'homework', 'class', 'teacher', 'marks', 'grades'],
-  college: ['college', 'university', 'campus', 'degree', 'friends at college', 'professor'],
-  exam: ['exam', 'exams', 'test', 'quiz', 'paper', 'finals', 'revision', 'study', 'syllabus'],
+  school: ['school', 'schools', 'syllabus', 'syllabi', 'homework', 'assignments', 'class', 'classes', 'teacher', 'teachers', 'marks', 'grades', 'education', 'learning', 'studying', 'studied', 'will study'],
+  college: ['college', 'colleges', 'university', 'universities', 'campus', 'campuses', 'degree', 'degrees', 'friends at college', 'professor', 'professors', 'university friends', 'higher education'],
+  exam: ['exam', 'exams', 'test', 'tests', 'quiz', 'quizzes', 'paper', 'papers', 'finals', 'final exam', 'final exams', 'revision', 'study', 'studied', 'studying', 'will study', 'syllabus'],
 
   // Finance and Money
-  money: ['money', 'income', 'wealth', 'earnings', 'salary', 'bank account'],
-  savings: ['savings', 'save', 'bank', 'financial security', 'piggy bank'],
-  investment: ['investment', 'invest', 'real estate', 'property', 'stocks', 'mutual funds'],
-  loan: ['loan', 'borrow', 'debt', 'emi', 'interest rate', 'credit'],
+  money: ['money', 'income', 'earnings', 'wealth', 'salary', 'salaries', 'bank account', 'accounts', 'funds', 'cash', 'money earned', 'make money', 'making money'],
+  savings: ['saving', 'savings', 'save', 'saved', 'saving money', 'financial security', 'piggy bank', 'bank savings', 'accumulating money'],
+  investment: ['investment', 'investments', 'invest', 'invested', 'will invest', 'real estate', 'property', 'properties', 'stocks', 'mutual funds', 'funds', 'investment planning', 'portfolio'],
+  loan: ['loan', 'loans', 'borrow', 'borrowed', 'borrowing', 'debt', 'debts', 'emi', 'interest rate', 'credit', 'credit line', 'borrow money', 'loan payment', 'loan repayment'],
 
   // Parenting and Family
-  parenting: ['parenting', 'tarbiyat', 'raising kids', 'child care', 'teaching kids'],
-  kids: ['kids', 'children', 'bachay', 'baby', 'child', 'sons', 'daughters'],
-  family: ['family', 'relatives', 'ghar', 'parents', 'brothers', 'sisters', 'cousins'],
+  parenting: ['parenting', 'parent', 'parents', 'raising kids', 'raising children', 'child care', 'taking care of kids', 'teaching kids', 'guiding children', 'disciplining children'],
+  kids: ['kids', 'children', 'child', 'baby', 'babies', 'son', 'sons', 'daughter', 'daughters', 'bachay', 'offspring', 'your kids', 'my kids'],
+  family: ['family', 'families', 'relatives', 'ghar', 'household', 'parents', 'mother', 'father', 'brothers', 'sisters', 'cousins', 'extended family', 'close family'],
 
   // Social Life
-  friends: ['friends', 'doston', 'buddy', 'best friend', 'friendship', 'group hangouts'],
-  party: ['party', 'celebration', 'birthday party', 'night out', 'wedding party'],
-  social_media: ['social media', 'instagram', 'tiktok', 'snapchat', 'facebook', 'twitter', 'youtube'],
-  travel: ['travel', 'vacation', 'trip', 'tourism', 'destination', 'journey', 'sightseeing'],
+  friends: ['friends', "fun", 'friend', 'friendship', 'best friend', 'best friends', 'doston', 'buddies', 'group hangouts', 'friend group', 'peer group'],
+  party: ['party', 'parties', 'celebration', 'celebrations', 'birthday party', 'night out', 'outing', 'wedding party', 'social gathering'],
+  social_media: ['social media', 'instagram', 'facebook', 'tiktok', 'snapchat', 'twitter', 'youtube', 'reels', 'shorts', 'social networking', 'online platforms', 'media posts'],
+  travel: ['travel', 'travels', 'vacation', 'vacations', 'trip', 'trips', 'tourism', 'tourist', 'touring', 'destination', 'journey', 'journeys', 'sightseeing', 'exploring', 'traveling', 'traveled', 'will travel'],
 
   // Health and Lifestyle
-  health: ['health', 'sehat', 'healthy', 'well-being', 'fitness'],
-  exercise: ['exercise', 'gym', 'walking', 'yoga', 'running', 'workout', 'training'],
-  junk_food: ['junk food', 'burger', 'pizza', 'fries', 'fast food', 'takeout', 'unhealthy'],
-  diet: ['diet', 'dieting', 'balanced diet', 'nutrition', 'eating habits'],
-  weight: ['weight', 'overweight', 'fat', 'slim', 'fit', 'obese'],
+  health: ['health', 'healthy', 'well-being', 'wellness', 'fitness', 'fit', 'physical health', 'mental health', 'emotional health', 'sehat', 'living healthy'],
+  exercise: ['exercise', 'exercising', 'gym', 'working out', 'workout', 'workouts', 'running', 'walking', 'yoga', 'stretching', 'training', 'fitness routine', 'exercised', 'will exercise'],
+  junk_food: ['junk food', 'fast food', 'burger', 'burgers', 'pizza', 'pizzas', 'fries', 'takeout', 'unhealthy food', 'processed food', 'junk eating', 'eating out'],
+  diet: ['diet', 'dieting', 'balanced diet', 'nutrition', 'eating habits', 'food habits', 'diet plan', 'diet plans', 'meal planning', 'healthy eating'],
+  weight: ['weight', 'weights', 'overweight', 'fat', 'slim', 'fit', 'obese', 'gained weight', 'losing weight', 'weight loss', 'weight gain', 'will lose weight'],
 
   // Marriage and Relationships
-  marriage: ['marriage', 'marry', 'married', 'shaadi', 'wedding', 'rishta'],
-  married: ['married', 'shaadi', 'wedding done', 'life partner', 'husband', 'wife'],
-  rishta: ['rishta', 'proposal', 'match', 'family introduction'],
-  single: ['single', 'not married', 'alone', 'independent', 'shaadi nahi hui'],
-  dating: ['dating', 'relationship', 'boyfriend', 'girlfriend', 'love life'],
+  marriage: ['marriage', 'marriages', 'marry', 'marries', 'married', 'shaadi', 'wedding', 'weddings', 'rishta', 'life partner', 'spouse', 'nuptials'],
+  married: ['married', 'shaadi', 'wedding', 'wedding done', 'husband', 'wife', 'spouse', 'marital life', 'marital status'],
+  rishta: ['rishta', 'rishtay', 'proposal', 'match', 'matches', 'family introduction', 'marriage proposal', 'proposal meeting'],
+  single: ['single', 'not married', 'alone', 'independent', 'shaadi nahi hui', 'unmarried', 'living alone', 'without partner'],
+  dating: ['dating', 'relationship', 'relationships', 'boyfriend', 'girlfriend', 'love life', 'romantic life', 'romance'],
 
-  // Career
-  career: ['career', 'profession', 'occupation', 'future plans', 'aspirations'],
-  business: ['business', 'trade', 'startup', 'company', 'entrepreneurship', 'shop', 'dhandha'],
-  promotion: ['promotion', 'career growth', 'raise', 'higher position', 'climbing ladder'],
+  // Career and Work
+  career: ['career', 'careers', 'profession', 'professions', 'occupation', 'occupations', 'future plan', 'future plans', 'aspiration', 'aspirations', 'career path', 'career choice', 'working', 'worked', 'will work'],
+  business: ['business', 'businesses', 'trade', 'trading', 'startup', 'startups', 'company', 'companies', 'entrepreneurship', 'entrepreneur', 'entrepreneurs', 'shop', 'shops', 'dhandha', 'run a business', 'running a business'],
+  promotion: ['promotion', 'promotions', 'career growth', 'raise', 'raises', 'higher position', 'climbing the ladder', 'career advancement', 'promoted', 'getting promoted', 'will be promoted'],
+
+  // Emotions
+  overwhelmed: ['overwhelmed', 'feeling overwhelmed', 'too much', 'can’t handle', 'couldn’t handle', 'handling too much', 'burnout', 'burned out', 'feeling burnt out', 'will feel overwhelmed'],
+  sad: ['sad', 'saddened', 'depressed', 'depressing', 'feeling down', 'felt down', 'will feel sad', 'feels sad'],
+  happy: ['happy', 'happier', 'happiest', 'excited', 'exciting', 'joyful', 'joy', 'thrilled', 'thrilling', 'feeling happy', 'felt happy', 'will be happy'],
+  tired: ['tired', 'exhausted', 'fatigued', 'fatigue', 'drained', 'feeling tired', 'felt tired', 'will feel tired'],
+  anxious: ['anxious', 'anxiety', 'nervous', 'nervousness', 'worried', 'worry', 'worries', 'feeling anxious', 'felt anxious', 'will feel anxious'],
+  lonely: ['lonely', 'alone', 'isolated', 'feeling lonely', 'felt lonely', 'will feel lonely', 'feels alone'],
+  lost: ['lost', 'confused', 'confusion', 'don’t know', 'don’t understand', 'felt lost', 'feeling lost', 'will feel lost', 'without direction', 'no direction'],
+  unmotivated: ['unmotivated', 'unmotivating', 'lazy', 'laziness', 'no energy', 'low energy', 'lost motivation', 'will lose motivation', 'feeling lazy', 'felt lazy'],
 
   // Default
-  default: ['life', 'advice', 'help', 'question', 'what to do', 'opinion', 'suggestion']
+  default: ['life', 'advice', 'help', 'question', 'questions', 'what to do', 'opinion', 'opinions', 'suggestion', 'suggestions', 'idea', 'ideas', 'need guidance', 'guidance']
 };
 
 
