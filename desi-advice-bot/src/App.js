@@ -33,6 +33,57 @@ const App = () => {
       "Beta, college is not for fun. Degree first, then think about breathing.",
       "Beta, if you don’t get top marks, just don’t come home. What will people say?"
     ],
+    food: [
+    "Beta, biryani is life. Everything else is just garnish.",
+    "Beta, chai solves all problems. Drink another cup!",
+    "Beta, never serve chai without biscuits. What will guests think?"
+  ],
+  hospitality: [
+    "Beta, always greet guests with a smile. Even if you're faking it.",
+    "Beta, don’t let guests leave without eating. It’s against our izzat!",
+    "Beta, make sure the house is spotless. Aunties are watching!"
+  ],
+
+  // Superstitions
+  superstition: [
+    "Beta, wear a kala dhaaga to protect from nazar.",
+    "Beta, don’t sweep the floor at night. It brings bad luck!",
+    "Beta, dreaming about snakes means money or enemies. Be prepared."
+  ],
+
+  // Religion and Festivals
+  ramadan: [
+    "Beta, post less and pray more during Ramadan.",
+    "Beta, don’t miss taraweeh. It’s good for your soul and legs!",
+    "Beta, eat less pakoras and pray more in Ramadan!"
+  ],
+  eid: [
+    "Beta, wear your shalwar kameez properly. This is Eid, not a fashion show!",
+    "Beta, greet EVERY aunty at the party, or they’ll gossip about you.",
+    "Beta, save some biryani for your cousins. Sharing is sunnah!",
+       "Beta, wear your shalwar kameez properly. This is Eid, not a fashion show!",
+      "Beta, don’t eat too much biryani. Save some space for sheer khurma.",
+      "Beta, make sure you greet EVERY aunty at the party, or they’ll complain to your mother!",
+      "Beta, why didn’t you bring a plate of food to the mosque? People are talking.",
+      "Beta, if you don’t pray this Eid, how will you get barkat in your life?"
+  ],
+
+  // Neighbors and Society
+  neighbors: [
+    "Beta, don’t talk too loudly. The neighbors are already judging us.",
+    "Beta, Sharma ji’s son just got a promotion. What are YOU doing?",
+    "Beta, always say salaam to the neighbors. Even if they’re annoying."
+  ],
+
+  // Technology and Trends
+
+  whatsapp: [
+    "Beta, why didn’t you reply to the family WhatsApp group? Everyone thinks you’re ignoring us.",
+    "Beta, forward this dua to 10 people, or you’ll get nazar!",
+    "Beta, WhatsApp stickers are fun, but don’t forget your responsibilities."
+  ],
+
+  // Default Responses
     exam: [
       "Beta, if you fail this exam, we’ll cancel Netflix and sell your phone.",
       "Beta, don’t even THINK about sleeping before you memorize the entire syllabus!"
@@ -298,17 +349,14 @@ const App = () => {
       "Beta, why are you dreaming about space? You haven’t even cleaned your room!",
       "Beta, no matter how modern you are, remember: what will people say?"
     ],
-    eid: [
-      "Beta, wear your shalwar kameez properly. This is Eid, not a fashion show!",
-      "Beta, don’t eat too much biryani. Save some space for sheer khurma.",
-      "Beta, make sure you greet EVERY aunty at the party, or they’ll complain to your mother!",
-      "Beta, why didn’t you bring a plate of food to the mosque? People are talking.",
-      "Beta, if you don’t pray this Eid, how will you get barkat in your life?"
-    ],
+
     technology: [
       "Beta, always on the phone? Will it get you a job?",
       "Beta, social media influencer? Is that even a real career?",
-      "Beta, online shopping again? Go to the market; it's healthier!"
+      "Beta, online shopping again? Go to the market; it's healthier!",
+        "Beta, social media influencers are not real careers. Get a proper job.",
+    "Beta, online shopping again? Go haggle in the bazaar like a true Desi.",
+    "Beta, too much screen time will rot your brain!"
     ],
     // Social Behavior
     social: [
@@ -437,8 +485,19 @@ const App = () => {
     social: ['friends', 'social', 'marriage', 'wedding', 'neighbors', 'society', 'community'],
     // Health and Lifestyle
     // Technology and Gadgets
-    technology: ['phone', 'social media', 'internet', 'gadgets', 'online', 'computer', 'technology'],
-    // Default
+    technology: ['phone', 'social media', 'internet', 'gadgets', 'online', 'computer', 'technology',   'phone', 'internet', 'social media', 'online', 'gadgets', 'technology'],
+    food: ['food', 'biryani', 'chai', 'tea', 'snacks', 'cooking', 'eating', 'drink', 'beverage'],
+  hospitality: ['guests', 'hospitality', 'host', 'clean', 'visit', 'serving'],
+
+  // Superstitions
+  superstition: ['nazar', 'evil eye', 'dreams', 'lucky', 'unlucky', 'sweep', 'luck'],
+
+  // Religion and Festivals
+  ramadan: ['ramadan', 'taraweeh', 'pakoras', 'fasting', 'iftar'],
+
+  // Neighbors and Society
+  neighbors: ['neighbors', 'society', 'gossip', 'sharma ji', 'community'],
+
     default: ['life', 'advice', 'help', 'question', 'questions', 'what to do', 'opinion', 'opinions', 'suggestion', 'suggestions', 'idea', 'ideas', 'need guidance', 'guidance']
   };
 

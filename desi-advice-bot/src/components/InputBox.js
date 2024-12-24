@@ -15,7 +15,7 @@ const InputBox = ({ onSubmit }) => {
       <textarea
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        placeholder="Type your scenario here..."
+        placeholder="Type your question here, eg. Should i become a lawyer?"
         rows="3"
         style={{ width: '80%', padding: '10px', fontSize: '1rem' }}
       />
