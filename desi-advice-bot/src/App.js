@@ -8,11 +8,18 @@ const App = () => {
   const [response, setResponse] = useState('');
 
   const adviceResponses = {
-    job: "Beta, keep your job stable. Don't think of quitting unless you have another offer!",
-    marriage: "Arre, why are you still single? Time is ticking!",
-    travel: "Traveling is good, beta, but first, settle down and save money.",
-    default: "Beta, I have no words for this. But remember: Log kya kahenge?"
-  };
+  job: "Beta, job thik hai, but why not start your own business? Memons are born for trade!",
+  marriage: "Beta, kaun sambhalega family business? Find a good Memon rishta quickly!",
+  travel: "Travel later, beta. First, 'paisa invest karo' in real estate or the family business.",
+  doctor: "Doctor banna accha hai, beta, but make sure to have your own clinic. Family pride zaroori hai!",
+  engineer: "Engineering is fine, but what about running the family business instead?",
+  lawyer: "Law is noble, beta, but business law samajhna zyada zaroori hai.",
+  arts: "Beta, art is passion, but profit kahan hai? ‘Paisa paisa hota hai!’",
+  family: "Beta, always stay close to family. 'Sab Allah ka fazl hai.'",
+  default: "Beta, log kya kahenge is the real question. Always think of the family name!"
+};
+
+
 
   const getAdvice = (input) => {
     const lowerInput = input.toLowerCase();
