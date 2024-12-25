@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Guide from './components/Guide'; // Import the new Guide component
 import InputBox from './components/InputBox';
 import ResponseBox from './components/ResponseBox';
+
 import SpeechButton from './components/SpeechButton';
 const theme = createTheme({
   palette: {
@@ -148,7 +149,8 @@ const App = () => {
     travel: [
       "Beta, why travel when you can save? Happiness is overrated anyway.",
       "Beta, spend that travel money on a marriage proposal instead!",
-      "Beta, ghoomne ke liye paisa hai, lekin investment ke liye nahi?"
+      "Beta, why travel? Is your house not scenic enough?",
+      "Beta, spend that travel money on a marriage proposal instead!",
     ],
 
     // Health and Lifestyle
@@ -365,6 +367,26 @@ const App = () => {
       "Beta, why are you still unmarried? People are starting to talk.",
       "Beta, visiting friends again? Are you avoiding family responsibilities?"
     ],
+    sports: [
+    "Beta, why play sports? Are you training for the Olympics or just wasting time?",
+    "Beta, watching cricket all night will only make your grades drop.",
+    "Beta, stop shouting at the TV. The players can’t hear you!"
+  ],
+  when_i_was_your_age: [
+    "Beta, when I was your age, I walked 10 kilometers to school and still topped my class!",
+    "Beta, I bought my first house at your age. You’re still asking for pocket money?",
+    "Beta, we didn’t have fancy gyms. We worked hard, and that was our exercise!"
+  ],
+  procrastination: [
+    "Beta, stop procrastinating! Time waits for no one.",
+    "Beta, why do tomorrow what you can do today? Get up and work!",
+    "Beta, Sharma ji’s son never procrastinates. What’s your excuse?"
+  ],
+  weddings: [
+    "Beta, don’t dance too much at the wedding. People are watching!",
+    "Beta, make sure your clothes are perfect. Weddings are all about appearances!",
+    "Beta, attend the wedding but don’t forget your studies."
+  ],
 
     default: [
       "Beta, life is short, but people’s gossip lasts forever. Think about that.",
@@ -410,7 +432,7 @@ const App = () => {
     friends: ['friends', "fun", 'friend', 'friendship', 'best friend', 'best friends', 'doston', 'buddies', 'group hangouts', 'friend group', 'peer group'],
     party: ['party', 'parties', 'celebration', 'celebrations', 'birthday party', 'night out', 'outing', 'wedding party', 'social gathering'],
     social_media: ['social media', 'instagram', 'facebook', 'tiktok', 'snapchat', 'twitter', 'youtube', 'reels', 'shorts', 'social networking', 'online platforms', 'media posts'],
-    travel: ['travel', 'travels', 'vacation', 'vacations', 'trip', 'trips', 'tourism', 'tourist', 'touring', 'destination', 'journey', 'journeys', 'sightseeing', 'exploring', 'traveling', 'traveled', 'will travel'],
+    travel: ['travel', 'travels', 'vacation', 'vacations', 'trip', 'trips', 'tourism', 'tourist', 'touring', 'destination', 'journey', 'journeys', 'sightseeing', 'exploring', 'traveling', 'traveled', 'will travel', 'vacation', 'summer vacation', 'holiday', 'holidays', 'travel plans'],
 
     // Health and Lifestyle
     health: ['health', 'healthy', 'well-being', 'wellness', 'fitness', 'fit', 'physical health', 'mental health', 'emotional health', 'sehat', 'living healthy', 'health', 'diet', 'exercise', 'gym', 'lifestyle', 'food', 'eating', 'drinking'],
@@ -425,7 +447,10 @@ const App = () => {
     rishta: ['rishta', 'rishtay', 'proposal', 'match', 'matches', 'family introduction', 'marriage proposal', 'proposal meeting'],
     single: ['single', 'not married', 'alone', 'independent', 'shaadi nahi hui', 'unmarried', 'living alone', 'without partner'],
     dating: ['dating', 'relationship', 'relationships', 'boyfriend', 'girlfriend', 'love life', 'romantic life', 'romance'],
-
+    sports: ['cricket', 'football', 'hockey', 'olympics', 'sports', 'match', 'game'],
+  when_i_was_your_age: ['your age', 'back then', 'old days', 'young', 'my time'],
+  procrastination: ['procrastination', 'lazy', 'time wasting', 'delay', 'later'],
+  weddings: ['wedding', 'shaadi', 'celebration', 'marriage party', 'event'],
     // Career and Work
 
     career: ['career', 'careers', 'profession', 'professions', 'occupation', 'occupations', 'future plan', 'future plans', 'aspiration', 'aspirations', 'career path', 'career choice', 'working', 'worked', 'will work', 'job', 'career', 'profession', 'work', 'business', 'startup', 'entrepreneur', 'occupation'],
