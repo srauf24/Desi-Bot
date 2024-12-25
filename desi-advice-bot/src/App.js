@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Container, Typography, Box, Card, Button, ThemeProvider, createTheme } from '@mui/material';
 import { Mic, Send } from '@mui/icons-material';
 import Header from './components/Header';
+import Guide from './components/Guide'; // Import the new Guide component
 import InputBox from './components/InputBox';
 import ResponseBox from './components/ResponseBox';
 import SpeechButton from './components/SpeechButton';
@@ -485,8 +486,45 @@ const App = () => {
     social: ['friends', 'social', 'marriage', 'wedding', 'neighbors', 'society', 'community'],
     // Health and Lifestyle
     // Technology and Gadgets
-    technology: ['phone', 'social media', 'internet', 'gadgets', 'online', 'computer', 'technology',   'phone', 'internet', 'social media', 'online', 'gadgets', 'technology'],
-    food: ['food', 'biryani', 'chai', 'tea', 'snacks', 'cooking', 'eating', 'drink', 'beverage'],
+    technology: ['phone', 'social media', 'internet', 'gadgets', 'online', 'computer', 'technology',   'phone', 'internet', 'social media', 'online', 'gadgets', 'technology', 'video games', 'fortnite'],
+food: [
+  // General Foods
+  'food', 'meal', 'biryani', 'pulao', 'nihari', 'haleem', 'korma', 'karahi',
+  'chicken', 'beef', 'mutton', 'roast', 'seekh kebab', 'shami kebab', 'chapli kebab',
+  'paratha', 'naan', 'roti', 'puri', 'bhatura', 'tandoori', 'kulcha',
+  'rice', 'daal', 'chawal', 'sabzi', 'vegetable', 'saag', 'palak', 'aloo',
+  'bhindi', 'karela', 'chana', 'keema', 'kofta', 'cutlets',
+
+  // Snacks
+  'snacks', 'samosa', 'pakora', 'kachori', 'chaat', 'golgappa', 'pani puri',
+  'dahi puri', 'chaat masala', 'bhalla', 'alu tikki', 'sev puri',
+
+  // Sweets
+  'sweets', 'dessert', 'mithai', 'gulab jamun', 'jalebi', 'laddu', 'barfi',
+  'rasmalai', 'kheer', 'sheer khurma', 'halwa', 'sooji halwa', 'gajjar ka halwa',
+  'zarda', 'shahi tukda', 'rabri', 'cham cham',
+
+  // Breakfast Items
+  'breakfast', 'anda', 'egg', 'omelette', 'paratha', 'puri', 'halwa puri',
+  'nashta', 'bread', 'butter', 'jam', 'chai paratha', 'lassi',
+
+  // Beverages
+  'chai', 'tea', 'green tea', 'kashmiri chai', 'doodh patti', 'karak chai',
+  'coffee', 'cold drink', 'soda', 'lassi', 'sharbat', 'rooh afza',
+  'milkshake', 'juice', 'falooda', 'limbu pani', 'nimbu pani',
+
+  // Condiments and Ingredients
+  'spices', 'masala', 'garam masala', 'turmeric', 'haldi', 'chilli', 'mirchi',
+  'coriander', 'dhaniya', 'cumin', 'zeera', 'cardamom', 'elaichi', 'cloves',
+  'long', 'cinnamon', 'dalchini', 'ginger', 'adrak', 'garlic', 'lehsan',
+  'onion', 'pyaaz', 'tomato', 'tamatar', 'mint', 'pudina', 'yogurt', 'dahi',
+  'pickle', 'achaar', 'ghee', 'butter', 'oil',
+
+  // Other Traditional Foods
+  'khichdi', 'tikka', 'roll', 'shawarma', 'halwa', 'chutney', 'chickpeas',
+  'murgh', 'gola kabab', 'fish fry', 'bhoona', 'malai boti', 'siri paya',
+  'bakra', 'qorma', 'bhuna gosht', 'payee', 'katakat', 'nihari'
+],
   hospitality: ['guests', 'hospitality', 'host', 'clean', 'visit', 'serving'],
 
   // Superstitions
@@ -544,7 +582,7 @@ const App = () => {
             }}
         >
           <Container maxWidth="sm">
-            {/* Goofy Header */}
+{/* Goofy Header */}
             <Box
                 sx={{
                   backgroundColor: 'rgba(255, 255, 255, 0.8)',
@@ -573,8 +611,6 @@ const App = () => {
                 "Because Sharma Ji's son can't beat this wisdom!"
               </Typography>
             </Box>
-
-            {/* Main Content */}
             <Typography variant="h4" gutterBottom>
               Desi Advice Assistant
             </Typography>
@@ -602,7 +638,10 @@ const App = () => {
               >
                 Repeat Advice
               </Button>
-            </Box>
+              {/* Guide Section */}
+        <Box mt={15}>
+          <Guide />
+        </Box>            </Box>
           </Container>
         </Box>
       </ThemeProvider>
