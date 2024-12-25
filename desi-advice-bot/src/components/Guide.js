@@ -14,7 +14,7 @@ const Guide = () => {
       }}
     >
       <Typography variant="h6" sx={{ mb: 1, color: '#3f51b5' }}>
-        How to Use the Advice Bot
+        How to Use the Memon Bot
       </Typography>
       <Typography variant="body1" sx={{ color: '#333' }}>
         Share anything you'd like advice on! You can talk about:
