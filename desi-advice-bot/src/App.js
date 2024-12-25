@@ -39,22 +39,37 @@ const getAdvice = (input) => {
     }
   }
 
-  const adviceOptions = adviceResponses[adviceKey];
+  const adviceOptions = adviceResponses[adviceKey] || ['Beta, I don’t have advice for that.'];
   const advice = Array.isArray(adviceOptions)
     ? adviceOptions[Math.floor(Math.random() * adviceOptions.length)]
     : adviceOptions;
+
+  if (typeof advice !== 'string') {
+    console.error('Unexpected advice type:', typeof advice);
+    setResponse('Beta, something went wrong.');
+    return;
+  }
 
   setResponse(advice);
   speakAdvice(advice);
 };
 
+const speakAdvice = (advice) => {
+  if (typeof advice !== 'string') {
+    console.error('Expected a string for advice but got:', typeof advice);
+    return;
+  }
 
-  const speakAdvice = (advice) => {
-    const utterance = new SpeechSynthesisUtterance(advice);
-    const voices = speechSynthesis.getVoices();
-    utterance.voice = voices.find((voice) => voice.lang === 'en-IN') || voices[0]; // Fallback to first voice if 'en-IN' not found
-    speechSynthesis.speak(utterance);
-  };
+  const voices = speechSynthesis.getVoices();
+  if (voices.length === 0) {
+    console.error('No voices available for speech synthesis.');
+    return;
+  }
+
+  const utterance = new SpeechSynthesisUtterance(advice);
+  utterance.voice = voices.find((voice) => voice.lang === 'en-IN') || voices[0];
+  speechSynthesis.speak(utterance);
+};
 
   return (
       <ThemeProvider theme={theme}>
