@@ -611,6 +611,7 @@ food: [
             <Box
                 sx={{
                   backgroundColor: 'rgba(255, 255, 255, 0.8)',
+
                   borderRadius: 2,
                   mb: 4,
                   py: 2,

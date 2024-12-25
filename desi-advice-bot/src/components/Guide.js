@@ -11,6 +11,10 @@ const Guide = () => {
         mb: 3,
         textAlign: 'left',
         boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)',
+        transition: 'transform 0.3s ease',
+        '&:hover': {
+          transform: 'scale(1.05)',
+        },
       }}
     >
       <Typography variant="h6" sx={{ mb: 1, color: '#3f51b5' }}>

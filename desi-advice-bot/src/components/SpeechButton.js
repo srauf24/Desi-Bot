@@ -19,7 +19,22 @@ const SpeechButton = ({ onResult }) => {
   };
 
   return (
-    <button onClick={handleSpeech} style={{ padding: '10px 20px', marginTop: '10px' }}>
+    <button
+      onClick={handleSpeech}
+      style={{
+        padding: '10px 20px',
+        marginTop: '10px',
+        backgroundColor: '#3f51b5',
+        color: 'white',
+        border: 'none',
+        borderRadius: '5px',
+        cursor: 'pointer',
+        fontSize: '16px',
+        transition: 'background-color 0.3s ease',
+      }}
+      onMouseOver={(e) => (e.target.style.backgroundColor = '#303f9f')}
+      onMouseOut={(e) => (e.target.style.backgroundColor = '#3f51b5')}
+    >
       🎙 Speak Your Scenario
     </button>
   );
