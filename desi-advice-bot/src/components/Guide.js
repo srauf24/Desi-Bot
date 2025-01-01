@@ -1,6 +1,18 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-
+const categories = [
+  "School and Education",
+  "Travel",
+  "Nutrition/Weight Loss",
+  "Mental health",
+  "Technology",
+  "Finance and Money",
+  "Social Life",
+  "Marriage and Relationships",
+  "Career",
+  "Professions",
+  "Food"
+];
 const Guide = () => {
   return (
     <Box
@@ -23,8 +35,15 @@ const Guide = () => {
       <Typography variant="body1" sx={{ color: '#333' }}>
         Share anything you'd like advice on! You can talk about:
       </Typography>
+        <Box sx={{ mt: 1 }}>
+        {categories.map((category, index) => (
+          <Typography key={index} variant="body2" sx={{ color: '#555' }}>
+            {category}
+          </Typography>
+        ))}
+      </Box>
       <Typography variant="body2" sx={{ color: '#555', mt: 1 }}>
-        Try asking: "What should I do about my exams?" or "How can I handle my nosy neighbors?"
+        Try asking: "What should I do about my exams?" or "Where should I travel?"
       </Typography>
     </Box>
   );
